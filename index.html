@@ -17,7 +17,6 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden}
 
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
 .logo{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:700;letter-spacing:.15em;color:var(--accent);text-transform:uppercase;flex-shrink:0}
 .nav-links{display:flex;align-items:center;gap:1.5rem}
@@ -26,7 +25,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .nav-cta{font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:.45rem 1rem;text-decoration:none;transition:all .3s;white-space:nowrap}
 .nav-cta:hover{background:var(--accent);color:var(--bg)}
 
-/* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-300px;right:-300px;width:700px;height:700px;background:radial-gradient(circle,rgba(196,164,107,.06) 0%,transparent 70%);pointer-events:none}
 .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--border)}
@@ -44,14 +42,12 @@ h1 em{font-style:italic;color:var(--accent)}
 .btn-ghost:hover{color:var(--text)}
 .btn-ghost::after{content:'↓'}
 
-/* STATS */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .stat{padding:1.5rem 1.2rem;border-right:1px solid var(--border);text-align:center}
 .stat:last-child{border-right:none}
 .stat-num{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.5rem);font-weight:700;color:var(--accent);line-height:1;margin-bottom:.25rem}
 .stat-label{font-size:.58rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;line-height:1.3}
 
-/* SECTIONS */
 .section{padding:5rem 2rem}
 .s-tag{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem;display:flex;align-items:center;gap:.5rem}
 .s-tag::before{content:'';display:block;width:1rem;height:1px;background:var(--accent)}
@@ -59,21 +55,31 @@ h1 em{font-style:italic;color:var(--accent)}
 .s-subtitle{font-size:.85rem;color:var(--muted2);line-height:1.75;margin-bottom:2.5rem}
 .divider{height:1px;background:var(--border);margin:0 2rem}
 
-/* VIDEO */
+/* MODULE 0 */
+.module0-section{padding:5rem 2rem;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.module0-inner{max-width:860px}
+.module0-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(196,164,107,.1);border:1px solid rgba(196,164,107,.3);padding:.3rem .9rem;font-size:.65rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem}
+.module0-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s ease infinite}
+.module0-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:700;line-height:1.1;margin-bottom:.6rem}
+.module0-sub{font-size:.85rem;color:var(--muted2);line-height:1.75;margin-bottom:1.8rem;max-width:580px}
+.video-container{position:relative;aspect-ratio:16/9;width:100%;background:#000;overflow:hidden}
+.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.module0-cta{margin-top:1.5rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem}
+.module0-cta-text{font-size:.78rem;color:var(--muted2)}
+.module0-cta-text strong{color:var(--text);font-weight:500}
+
 .video-wrap{position:relative;aspect-ratio:16/9;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;width:100%}
 .video-wrap::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,164,107,.04) 0%,transparent 60%)}
 .play-ring{width:60px;height:60px;border:1.5px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.2rem;transition:all .3s;position:relative;z-index:1}
 .video-wrap:hover .play-ring{background:var(--accent);color:var(--bg);transform:scale(1.1)}
 .vid-badge{position:absolute;top:1rem;left:1rem;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:rgba(10,10,10,.8);padding:.3rem .6rem;border:1px solid var(--border)}
 
-/* MODULES INTRO */
 .modules-intro{display:flex;flex-direction:column;gap:1.5rem;margin-bottom:2.5rem}
 .highlight-boxes{display:flex;flex-direction:column;gap:.8rem}
 .highlight-box{background:var(--surface);border:1px solid var(--border);padding:1rem 1.2rem}
 .highlight-box strong{display:block;font-size:.78rem;font-weight:500;color:var(--text);margin-bottom:.25rem}
 .highlight-box span{font-size:.72rem;color:var(--muted2);line-height:1.6}
 
-/* MODULES GRID */
 .modules-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border)}
 .mod{background:var(--bg);padding:1.5rem;display:flex;gap:1.2rem;align-items:flex-start;transition:background .25s}
 .mod:hover{background:var(--surface)}
@@ -83,7 +89,6 @@ h1 em{font-style:italic;color:var(--accent)}
 .mod-tags{display:flex;flex-wrap:wrap;gap:.3rem;margin-top:.6rem}
 .mod-tag{font-size:.55rem;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(196,164,107,.25);padding:.15rem .45rem}
 
-/* TRACK RECORD */
 .tr-section{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:5rem 2rem}
 .tr-grid{display:flex;flex-direction:column;gap:3rem}
 .tr-preview{background:var(--bg);border:1px solid var(--border);overflow:hidden;width:100%}
@@ -105,7 +110,6 @@ h1 em{font-style:italic;color:var(--accent)}
 .tr-feat-body h4{font-size:.82rem;font-weight:500;color:var(--text);margin-bottom:.25rem}
 .tr-feat-body p{font-size:.72rem;color:var(--muted2);line-height:1.65}
 
-/* FOR WHO */
 .for-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:2rem}
 .for-card{background:var(--bg);padding:1.8rem 1.5rem;transition:background .25s}
 .for-card:hover{background:var(--surface)}
@@ -116,7 +120,6 @@ h1 em{font-style:italic;color:var(--accent)}
 .notfor-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.78rem;color:var(--muted2);line-height:1.6}
 .notfor-item::before{content:'×';color:#f87171;flex-shrink:0;font-size:.85rem;margin-top:1px}
 
-/* TESTIMONIALS */
 .testimonials{padding:5rem 2rem;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
 .testi-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2.5rem}
 .testi{background:var(--bg);border:1px solid var(--border);padding:1.5rem}
@@ -127,14 +130,12 @@ h1 em{font-style:italic;color:var(--accent)}
 .testi-sub{font-size:.62rem;color:var(--muted)}
 .testi-stars{color:var(--accent);font-size:.65rem;margin-bottom:.7rem}
 
-/* FAQ */
 .faq-section{padding:5rem 2rem}
 .faq-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--border);margin-top:2.5rem}
 .faq-item{background:var(--bg);padding:1.5rem}
 .faq-q{font-size:.82rem;font-weight:500;color:var(--text);margin-bottom:.5rem}
 .faq-a{font-size:.75rem;color:var(--muted2);line-height:1.7}
 
-/* PAYMENT */
 .pay-section{padding:5rem 2rem;border-top:1px solid var(--border)}
 .pay-grid{display:flex;flex-direction:column;gap:3rem}
 .pay-left h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,6vw,3rem);font-weight:700;line-height:1.1;margin-bottom:1.2rem}
@@ -152,7 +153,6 @@ h1 em{font-style:italic;color:var(--accent)}
 .step-body{font-size:.75rem;color:var(--muted2);line-height:1.65;padding-top:2px}
 .step-body strong{color:var(--text);font-weight:500}
 
-/* PAYMENT CARD */
 .pay-card{background:var(--surface);border:1px solid var(--border)}
 .pay-card-header{padding:.9rem 1.2rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
 .pay-card-header span{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
@@ -174,66 +174,48 @@ h1 em{font-style:italic;color:var(--accent)}
 .btn-confirm:hover{background:var(--accent);color:var(--bg)}
 .warn-box{font-size:.68rem;color:#f87171;background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.2);padding:.55rem .8rem;margin-bottom:.5rem;line-height:1.5}
 
-/* GUARANTEE */
 .guarantee{padding:3.5rem 2rem;display:flex;flex-direction:column;gap:1.5rem;border-top:1px solid var(--border)}
 .g-icon{font-size:2rem;opacity:.6}
 .g-body h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
 .g-body p{font-size:.78rem;color:var(--muted2);line-height:1.8}
 
-/* FOOTER */
 footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-direction:column;gap:1rem;align-items:center;text-align:center}
 .footer-logo{font-family:'Playfair Display',serif;font-size:.82rem;letter-spacing:.15em;color:var(--accent);text-transform:uppercase}
 .footer-right{display:flex;flex-wrap:wrap;justify-content:center;gap:1.2rem}
 .footer-right a{font-size:.62rem;color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s}
 .footer-right a:hover{color:var(--text)}
 
-/* TOAST */
 .toast{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--accent);color:var(--bg);padding:.6rem 1.2rem;font-size:.65rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;z-index:200;opacity:0;transform:translateY(.8rem);transition:all .3s;pointer-events:none}
 .toast.show{opacity:1;transform:translateY(0)}
-
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* DESKTOP OVERRIDES */
 @media(min-width:768px){
   nav{padding:1.2rem 3.5rem}
   .logo{font-size:1rem}
-  .nav-links a{font-size:.7rem;gap:2.5rem}
   .nav-cta{font-size:.7rem;padding:.5rem 1.4rem}
-
   .hero{padding:9rem 3.5rem 5rem}
-  .hero-actions{flex-wrap:nowrap}
-
   .stats{grid-template-columns:repeat(4,1fr)}
   .stat{padding:2rem 2.5rem;text-align:left}
-  .stat-num{font-size:2.5rem}
-
   .section{padding:6rem 3.5rem}
+  .module0-section{padding:6rem 3.5rem}
   .divider{margin:0 3.5rem}
-
   .modules-intro{flex-direction:row;gap:4rem;align-items:start}
   .modules-intro > div:first-child{flex:1}
   .highlight-boxes{flex:1}
-
   .modules-grid{grid-template-columns:repeat(2,1fr)}
-
   .tr-section{padding:6rem 3.5rem}
   .tr-grid{flex-direction:row;gap:5rem;align-items:center}
   .tr-grid > div:first-child{flex:1}
   .tr-preview{flex:1.2}
-
   .for-grid{grid-template-columns:repeat(3,1fr)}
-
   .testimonials{padding:6rem 3.5rem}
   .testi-grid{grid-template-columns:repeat(3,1fr)}
-
   .faq-section{padding:6rem 3.5rem}
   .faq-grid{grid-template-columns:repeat(2,1fr)}
-
   .pay-section{padding:6rem 3.5rem}
   .pay-grid{flex-direction:row;gap:5rem;align-items:start;max-width:1000px}
   .pay-left{flex:1}
   .pay-card-wrap{flex:1}
-
   .guarantee{flex-direction:row;padding:4rem 3.5rem;gap:3rem}
   footer{flex-direction:row;justify-content:space-between;padding:2.5rem 3.5rem;text-align:left}
   .footer-right{flex-wrap:nowrap}
@@ -242,30 +224,27 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="logo">Cryptomega</div>
   <div class="nav-links">
-    <a href="#formation" class="nav-hide-sm">Formation</a>
-    <a href="#track-record">Track Record</a>
+    <a href="#module0">Module 0</a>
+    <a href="#formation">Formation</a>
     <a href="#faq">FAQ</a>
     <a href="#paiement" class="nav-cta">Accéder →</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="tag">Formation trading crypto — 2025</div>
   <h1>Deviens le trader<br>que tu <em>aurais voulu</em><br>rencontrer.</h1>
   <p class="hero-sub">12 modules complets. Des méthodes institutionnelles. Un track record réel pour mesurer ta progression.</p>
   <p class="hero-for">Conçu pour <strong>les débutants qui veulent une vraie base</strong> et <strong>les traders intermédiaires qui plafonnent</strong> depuis trop longtemps.</p>
   <div class="hero-actions">
-    <a href="#paiement" class="btn-gold">Accéder à la formation</a>
+    <a href="#module0" class="btn-gold">Voir le module gratuit</a>
     <a href="#formation" class="btn-ghost">Voir le programme</a>
   </div>
 </section>
 
-<!-- STATS -->
 <div class="stats">
   <div class="stat"><div class="stat-num">12</div><div class="stat-label">Modules vidéo</div></div>
   <div class="stat"><div class="stat-num">+9 ans</div><div class="stat-label">D'expérience</div></div>
@@ -273,22 +252,24 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
   <div class="stat"><div class="stat-num">1</div><div class="stat-label">Track Record inclus</div></div>
 </div>
 
-<!-- VIDEO -->
-<section class="section" id="video">
-  <div class="s-tag">Présentation</div>
-  <h2 class="s-title">Ce que tu vas apprendre</h2>
-  <p class="s-subtitle">Regarde la vidéo de présentation avant de prendre ta décision.</p>
-  <!-- MODIF : remplace le bloc ci-dessous par ton iframe YouTube quand tu as la vidéo -->
-  <!-- <iframe width="100%" style="aspect-ratio:16/9" src="https://www.youtube.com/embed/TON_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
-  <div class="video-wrap">
-    <div class="play-ring">▶</div>
-    <div class="vid-badge">Vidéo de présentation — Disponible prochainement</div>
+<!-- MODULE 0 GRATUIT -->
+<section class="module0-section" id="module0">
+  <div class="module0-inner">
+    <div class="module0-badge">Accès gratuit · Module 0</div>
+    <h2 class="module0-title">Pourquoi 95% des traders perdent —<br>et comment tu peux faire partie des 5%</h2>
+    <p class="module0-sub">Avant d'investir dans la formation complète, regarde ce module d'introduction offert. C'est le point de départ de tout ce qu'on va construire ensemble.</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/vmo8Ntmc3Tc" title="CRYPTOMEGA — Module 0 : Introduction gratuite" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="module0-cta">
+      <a href="#paiement" class="btn-gold">Accéder aux 12 modules →</a>
+      <p class="module0-cta-text">Tu veux la suite ? <strong>La formation complète t'attend.</strong></p>
+    </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- MODULES -->
 <section class="section" id="formation">
   <div class="modules-intro">
     <div>
@@ -318,7 +299,6 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
   </div>
 </section>
 
-<!-- TRACK RECORD -->
 <section class="tr-section" id="track-record">
   <div class="tr-grid">
     <div>
@@ -352,7 +332,6 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
   </div>
 </section>
 
-<!-- POUR QUI -->
 <section class="section">
   <div class="s-tag">Pour qui ?</div>
   <h2 class="s-title">Cette formation est faite<br>pour toi si…</h2>
@@ -374,7 +353,6 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
 
 <div class="divider"></div>
 
-<!-- TÉMOIGNAGES -->
 <section class="testimonials">
   <div class="s-tag">Ils ont testé</div>
   <h2 class="s-title">Ce qu'ils en disent</h2>
@@ -385,7 +363,6 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="s-tag">Questions fréquentes</div>
   <h2 class="s-title">Ce que tu te demandes<br>sûrement</h2>
@@ -399,7 +376,6 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
   </div>
 </section>
 
-<!-- PAIEMENT -->
 <section class="pay-section" id="paiement">
   <div class="s-tag">Accès à la formation</div>
   <div class="pay-grid">
@@ -429,10 +405,8 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
           <div class="net-badge"><div class="net-dot"></div>USDT TRC20</div>
         </div>
         <div class="pay-card-body">
-          <!-- MODIF : remplace par <img src="qrcode.png"> quand tu as le QR -->
           <div class="qr-box"><span class="qr-label">QR Code<br>à venir</span></div>
           <div class="addr-label">Adresse de paiement USDT TRC20</div>
-          <!-- MODIF OBLIGATOIRE : remplace cette adresse par la tienne -->
           <div class="addr-box" id="address" onclick="copyAddr()">TXXX_REMPLACE_PAR_TON_ADRESSE_TRC20</div>
           <div class="addr-hint">↑ Cliquer pour copier</div>
           <div class="addr-label">Réseau obligatoire</div>
@@ -448,7 +422,6 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
   </div>
 </section>
 
-<!-- GARANTIE -->
 <div class="guarantee">
   <div class="g-icon">◈</div>
   <div class="g-body">
@@ -457,13 +430,12 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-logo">Cryptomega</div>
   <div class="footer-right">
     <a href="https://twitter.com/CryptomegaNews" target="_blank">Twitter</a>
+    <a href="#module0">Module 0</a>
     <a href="#formation">Programme</a>
-    <a href="#track-record">Track Record</a>
     <a href="#faq">FAQ</a>
     <a href="#paiement">Accéder</a>
   </div>
@@ -480,9 +452,6 @@ function copyAddr() {
     setTimeout(() => el.classList.remove('show'), 2500);
   });
 }
-</script>
-</body>
-</html>
 </script>
 </body>
 </html>
