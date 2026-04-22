@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRYPTOMEGA — Confirmation de paiement</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0a;--surface:#111;--border:rgba(255,255,255,0.07);--text:#ede9e1;--muted:#666;--muted2:#888;--accent:#c4a46b;--accent2:#e8d5a3}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem}
+
+.card{background:var(--surface);border:1px solid var(--border);padding:3rem 2.5rem;max-width:560px;width:100%}
+
+.logo{font-family:'Playfair Display',serif;font-size:.85rem;font-weight:700;letter-spacing:.18em;color:var(--accent);text-transform:uppercase;margin-bottom:2.5rem;display:block}
+
+.icon{font-size:2rem;margin-bottom:1.2rem}
+
+h1{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2rem);font-weight:700;line-height:1.1;margin-bottom:.8rem}
+
+.sub{font-size:.9rem;color:var(--muted2);line-height:1.75;margin-bottom:2rem}
+
+.steps{display:flex;flex-direction:column;gap:.8rem;margin-bottom:2rem}
+.step{display:flex;gap:.9rem;align-items:flex-start}
+.step-num{width:24px;height:24px;border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:.65rem;color:var(--accent);flex-shrink:0;font-weight:500}
+.step-body{font-size:.82rem;color:var(--muted2);line-height:1.65;padding-top:2px}
+.step-body strong{color:var(--text);font-weight:500}
+
+.divider{height:1px;background:var(--border);margin:1.5rem 0}
+
+.mail-block{background:var(--bg);border:1px solid var(--border);padding:1.2rem 1.5rem;margin-bottom:1.5rem}
+.mail-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+.mail-address{font-size:1rem;color:var(--accent);font-weight:500;letter-spacing:.02em}
+
+.btn-mail{display:block;width:100%;background:var(--accent);color:var(--bg);font-family:'DM Sans',sans-serif;font-size:.78rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:1rem;text-align:center;text-decoration:none;border:none;cursor:pointer;transition:all .3s;margin-bottom:1rem}
+.btn-mail:hover{background:var(--accent2)}
+
+.btn-back{display:block;width:100%;background:transparent;color:var(--muted2);font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.8rem;text-align:center;text-decoration:none;border:1px solid var(--border);cursor:pointer;transition:all .3s}
+.btn-back:hover{border-color:var(--muted2);color:var(--text)}
+
+.note{font-size:.72rem;color:var(--muted);line-height:1.7;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <span class="logo">Cryptomega</span>
+
+  <div class="icon">✉️</div>
+  <h1>Confirme ton paiement</h1>
+  <p class="sub">Tu viens de régler ta formation — plus qu'une étape pour recevoir ton accès complet.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">Prends une <strong>capture d'écran de ta transaction</strong> confirmée avec le hash.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">Envoie-la par mail à l'adresse ci-dessous avec l'objet <strong>"Confirmation paiement CRYPTOMEGA"</strong>.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">Tu recevras le lien d'accès à la formation <strong>sous 24h maximum</strong>, souvent bien plus vite.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="mail-block">
+    <div class="mail-label">Adresse mail de confirmation</div>
+    <div class="mail-address" id="mail-display">contact.cryptomega&#64;gmail.com</div>
+  </div>
+
+  <a class="btn-mail" id="btn-mailto">Ouvrir mon application mail →</a>
+  <a href="index.html" class="btn-back">← Retour à la formation</a>
+
+  <p class="note">💡 Si ton client mail ne s'ouvre pas automatiquement, copie l'adresse et envoie un mail manuellement avec ta capture en pièce jointe.</p>
+</div>
+
+<script>
+window.addEventListener('DOMContentLoaded', function(){
+  var parts = ['contact','.cryptomega','@','gmail','.com'];
+  var email = parts.join('');
+  var btn = document.getElementById('btn-mailto');
+  if(btn) btn.href = 'mailto:' + email + '?subject=Confirmation%20paiement%20CRYPTOMEGA%20Formation';
+});
+</script>
+
+</body>
+</html>
