@@ -154,6 +154,111 @@ h1 em{font-style:italic;color:var(--accent)}
 .btn-confirm:hover{background:var(--accent);color:var(--bg)}
 .warn-box{font-size:0.8rem;color:#f87171;background:rgba(248,113,113,.07);border:1px solid rgba(248,113,113,.2);padding:.55rem .8rem;margin-bottom:.5rem;line-height:1.5}
 
+/* ===== KLARNA 4X BANNER ===== */
+.klarna-banner{
+  background:linear-gradient(135deg, rgba(196,164,107,.08) 0%, rgba(232,213,163,.04) 100%);
+  border:1px solid rgba(196,164,107,.3);
+  padding:1.4rem 1.5rem;
+  margin-bottom:1.5rem;
+  position:relative;
+  overflow:hidden;
+}
+.klarna-banner::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  width:3px;height:100%;
+  background:linear-gradient(180deg, var(--accent), transparent);
+}
+.klarna-banner-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:.8rem;
+  margin-bottom:.6rem;
+}
+.klarna-banner-label{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  font-size:.62rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--accent);
+  font-weight:500;
+}
+.klarna-banner-label::before{
+  content:'';
+  width:.8rem;height:1px;
+  background:var(--accent);
+}
+.klarna-logo-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  background:#ffa8c5;
+  color:#0a0a0a;
+  padding:.2rem .55rem;
+  font-size:.62rem;
+  font-weight:700;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-family:'DM Sans',sans-serif;
+  border-radius:3px;
+}
+.klarna-banner-title{
+  font-family:'Playfair Display',serif;
+  font-size:1.25rem;
+  font-weight:700;
+  color:var(--text);
+  margin-bottom:.4rem;
+  line-height:1.2;
+}
+.klarna-banner-title em{
+  font-style:italic;
+  color:var(--accent);
+}
+.klarna-banner-detail{
+  font-size:.84rem;
+  color:var(--muted2);
+  line-height:1.55;
+}
+.klarna-banner-detail strong{
+  color:var(--text);
+  font-weight:500;
+}
+.klarna-installments{
+  display:flex;
+  gap:.4rem;
+  margin-top:.9rem;
+  flex-wrap:wrap;
+}
+.klarna-installment{
+  flex:1;
+  min-width:65px;
+  background:rgba(10,10,10,.5);
+  border:1px solid rgba(196,164,107,.2);
+  padding:.5rem .6rem;
+  text-align:center;
+  font-size:.7rem;
+}
+.klarna-installment-num{
+  display:block;
+  font-family:'Playfair Display',serif;
+  font-size:1rem;
+  font-weight:700;
+  color:var(--accent);
+  line-height:1;
+  margin-bottom:.2rem;
+}
+.klarna-installment-label{
+  font-size:.6rem;
+  color:var(--muted);
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+
 .guarantee{padding:3.5rem 2rem;display:flex;flex-direction:column;gap:1.5rem;border-top:1px solid var(--border)}
 .g-icon{font-size:2rem;opacity:.6}
 .g-body h3{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:.5rem}
@@ -197,6 +302,8 @@ footer{padding:2rem;border-top:1px solid var(--border);display:flex;flex-directi
   .guarantee{flex-direction:row;padding:4rem 3.5rem;gap:3rem}
   footer{flex-direction:row;justify-content:space-between;padding:2.5rem 3.5rem;text-align:left}
   .footer-right{flex-wrap:nowrap}
+  .klarna-banner{padding:1.6rem 1.8rem}
+  .klarna-banner-title{font-size:1.4rem}
 }
 
 /* ANIMATIONS HERO */
@@ -405,6 +512,7 @@ h1 em {
     <div class="faq-item"><div class="faq-q">Pourquoi payer en crypto uniquement ?</div><div class="faq-a">Le paiement en USDT sur Solana est décentralisé, rapide, sans intermédiaire et avec des frais de transaction quasi nuls. C'est cohérent avec l'univers dans lequel on trade.</div></div>
     <div class="faq-item"><div class="faq-q">Est-ce que la formation est adaptée aux débutants ?</div><div class="faq-a">Oui, entièrement. Le Module 1 repart de zéro. Chaque concept est introduit progressivement avec des exemples concrets avant d'aborder les sujets avancés.</div></div>
     <div class="faq-item"><div class="faq-q">Le track record outil, c'est quoi exactement ?</div><div class="faq-a">C'est un fichier Excel/Google Sheets dans lequel tu saisis tes trades. Il calcule automatiquement toutes tes métriques : win rate, R:R moyen, profit factor, drawdown. Inclus gratuitement.</div></div>
+    <div class="faq-item"><div class="faq-q">Le paiement en 4 fois sans frais, comment ça marche ?</div><div class="faq-a">Si tu choisis "Payer par carte", tu auras l'option <strong style="color:var(--accent)">Klarna</strong> sur la page de paiement. Tu paies <strong style="color:var(--accent)">149,25€ aujourd'hui</strong>, puis 3 versements de 149,25€ étalés sur 6 semaines. <strong>Aucun frais supplémentaire pour toi</strong>, et tu obtiens l'accès immédiat à la formation.</div></div>
     <div class="faq-item"><div class="faq-q">Y a-t-il un suivi après l'achat ?</div><div class="faq-a">Tu peux me contacter par mail <span style="color:#c4a46b;font-weight:500">contact.cryptomega</span><span style="color:#c4a46b;font-weight:500">&#64;</span><span style="color:#c4a46b;font-weight:500">gmail.com</span> ou via Twitter pour toute question. Je réponds personnellement.</div></div>
     <div class="faq-item"><div class="faq-q">Est-ce que je peux me faire rembourser ?</div><div class="faq-a">La nature du paiement crypto et de l'accès immédiat au contenu ne permettent pas de remboursement automatique. En cas de litige sérieux, la situation est étudiée au cas par cas.</div></div>
   </div>
@@ -412,6 +520,35 @@ h1 em {
 
 <section class="pay-section" id="paiement">
   <div class="s-tag">Accès à la formation</div>
+
+  <!-- ===== KLARNA 4X BANNER ===== -->
+  <div class="klarna-banner">
+    <div class="klarna-banner-top">
+      <span class="klarna-banner-label">Nouveau · Disponible par carte</span>
+      <span class="klarna-logo-tag">K · Klarna</span>
+    </div>
+    <h3 class="klarna-banner-title">Paye en <em>4 fois sans frais</em>.</h3>
+    <p class="klarna-banner-detail">Étale ton investissement sur 6 semaines — <strong>sans intérêts, sans dossier, décision instantanée</strong>. Disponible en choisissant Klarna sur la page de paiement par carte.</p>
+    <div class="klarna-installments">
+      <div class="klarna-installment">
+        <span class="klarna-installment-num">149,25€</span>
+        <span class="klarna-installment-label">Aujourd'hui</span>
+      </div>
+      <div class="klarna-installment">
+        <span class="klarna-installment-num">149,25€</span>
+        <span class="klarna-installment-label">Dans 2 sem.</span>
+      </div>
+      <div class="klarna-installment">
+        <span class="klarna-installment-num">149,25€</span>
+        <span class="klarna-installment-label">Dans 4 sem.</span>
+      </div>
+      <div class="klarna-installment">
+        <span class="klarna-installment-num">149,25€</span>
+        <span class="klarna-installment-label">Dans 6 sem.</span>
+      </div>
+    </div>
+  </div>
+
   <div style="background:var(--surface);border:1px solid var(--border);padding:1.5rem;margin-bottom:2.5rem">
     <div style="font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem;display:flex;align-items:center;gap:.5rem"><span style="display:block;width:.8rem;height:1px;background:var(--accent)"></span>Choisir ton mode de paiement</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border)">
@@ -427,9 +564,9 @@ h1 em {
       <div style="background:var(--bg);padding:1.2rem">
         <div style="font-size:.65rem;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem">Carte bancaire — Stripe</div>
         <div style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--muted2);line-height:1">597€</div>
-        <div style="font-size:.65rem;color:var(--muted);margin-top:.3rem">Paiement sécurisé Stripe</div>
+        <div style="font-size:.65rem;color:var(--muted);margin-top:.3rem">ou <strong style="color:var(--accent)">4 × 149,25€</strong> avec Klarna</div>
         <div style="margin-top:.8rem;font-size:.7rem;color:var(--muted2)">✓ Visa / Mastercard / Apple Pay</div>
-        <div style="font-size:.7rem;color:var(--muted2)">✓ Paiement instantané</div>
+        <div style="font-size:.7rem;color:var(--muted2)">✓ Paiement en 4× sans frais</div>
         <div style="font-size:.7rem;color:#f87171">+ 100€ de frais inclus</div>
       </div>
     </div>
@@ -481,7 +618,8 @@ h1 em {
           <a href="https://buy.stripe.com/14A8wP7d8dFq9O7dcLbsc02" target="_blank" style="display:block;width:100%;background:#fff;color:#0a0a0a;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.85rem;cursor:pointer;margin-top:1.2rem;text-align:center;text-decoration:none;transition:all .3s;border:none">
             💳 Payer par carte — 597€ →
           </a>
-          <p style="font-size:.6rem;color:var(--muted);text-align:center;margin-top:.5rem;letter-spacing:.05em">Paiement sécurisé par Stripe</p>
+          <p style="font-size:.65rem;color:var(--accent);text-align:center;margin-top:.5rem;letter-spacing:.05em;font-weight:500">✨ Klarna disponible · 4 × 149,25€ sans frais</p>
+          <p style="font-size:.6rem;color:var(--muted);text-align:center;margin-top:.3rem;letter-spacing:.05em">Paiement sécurisé par Stripe</p>
         </div>
       </div>
     </div>
